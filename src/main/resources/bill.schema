@@ -1,0 +1,171 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "statement": {
+      "id": "statement",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "generated": {
+          "id": "generated",
+          "type": "string"
+        },
+        "due": {
+          "id": "due",
+          "type": "string"
+        },
+        "period": {
+          "id": "period",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "from": {
+              "id": "from",
+              "type": "string"
+            },
+            "to": {
+              "id": "to",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+        "generated",
+        "due",
+        "period"
+      ]
+    },
+    "total": {
+      "id": "total",
+      "type": "number"
+    },
+    "package": {
+      "id": "skyPackage",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "subscriptions": {
+          "id": "subscriptions",
+          "type": "array",
+          "items": {
+            "id": "2",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "id": "type",
+                "type": "string"
+              },
+              "name": {
+                "id": "name",
+                "type": "string"
+              },
+              "cost": {
+                "id": "cost",
+                "type": "number"
+              }
+            }
+          }
+        },
+        "total": {
+          "id": "total",
+          "type": "number"
+        }
+      }
+    },
+    "callCharges": {
+      "id": "callCharges",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "calls": {
+          "id": "calls",
+          "type": "array",
+          "items": {
+            "id": "27",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "called": {
+                "id": "called",
+                "type": "string"
+              },
+              "duration": {
+                "id": "duration",
+                "type": "string"
+              },
+              "cost": {
+                "id": "cost",
+                "type": "number"
+              }
+            }
+          }
+        },
+        "total": {
+          "id": "total",
+          "type": "number"
+        }
+      }
+    },
+    "skyStore": {
+      "id": "skyStore",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "rentals": {
+          "id": "rentals",
+          "type": "array",
+          "items": {
+            "id": "0",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "id": "title",
+                "type": "string"
+              },
+              "cost": {
+                "id": "cost",
+                "type": "number"
+              }
+            }
+          }
+        },
+        "buyAndKeep": {
+          "id": "buyAndKeep",
+          "type": "array",
+          "items": {
+            "id": "1",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "id": "title",
+                "type": "string"
+              },
+              "cost": {
+                "id": "cost",
+                "type": "number"
+              }
+            }
+          }
+        },
+        "total": {
+          "id": "total",
+          "type": "number"
+        }
+      }
+    }
+  },
+  "required": [
+    "statement",
+    "total",
+    "package",
+    "callCharges",
+    "skyStore"
+  ]
+}
