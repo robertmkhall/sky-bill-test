@@ -1,8 +1,11 @@
 Requirements:
+Maven
 Java 8
-Tomcat (if not running using maven plugin).
 
 Run the app:
-    1. Run maven install to build the war
-    2. Either deploy to a tomcat compatible with Java 8, or run the maven jetty plugin
-    3. To view the bill open a browser and go to http://localhost:8080/, or the root address for where the war has been deployed
+1. Checkout the code and run the command below from the project directory. The command should build the project and
+deploy on an embedded jetty server.
+
+    mvn jetty:run
+
+2. To view the bill open a browser and go to http://localhost:8080
